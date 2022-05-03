@@ -16,20 +16,8 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class AllurTest {
+public class AllurTest extends BaseTest {
 
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.baseUrl = "https://www.ozon.ru/";
-        Configuration.browserSize = "1920x1080";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-        Configuration.browser = "chrome";
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
-        Configuration.browserCapabilities = capabilities;
-    }
 
     @Test
     @DisplayName("Проверка Ozon в хедере")
@@ -42,7 +30,5 @@ public class AllurTest {
             $("[data-widget=header]").should(text("Ozon"));
         });
     }
-
-//
 
 }
