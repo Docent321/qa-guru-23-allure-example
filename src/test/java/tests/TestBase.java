@@ -19,7 +19,7 @@ public class TestBase {
         Configuration.browserSize = System.getProperty("size", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.pageLoadTimeout = 80000;
-        Configuration.browserVersion = System.getProperty("version", "91");
+        Configuration.browserVersion = System.getProperty("version", "99");
 
         //password and user for remote browser
         String user = System.getProperty("user");
