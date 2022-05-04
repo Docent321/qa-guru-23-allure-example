@@ -26,7 +26,7 @@ public class AllurTest extends TestBase {
     @Tag("Web")
     void testLogotipOzon() {
         step("Открыть главную страницу", () -> {
-            open(baseUrl);;
+            open("https://www.ozon.ru/");;
         });
         step("Проверить наличие надписи Ozon в хедере", () -> {
             $("[data-widget=header]").should(text("Ozon"));
