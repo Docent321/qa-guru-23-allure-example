@@ -15,7 +15,7 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {;
-        Configuration.baseUrl = "https://ozon.ru/";
+        Configuration.baseUrl = "https://github.com/";
         Configuration.browserSize = System.getProperty("size", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.pageLoadTimeout = 80000;
