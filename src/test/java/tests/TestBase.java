@@ -29,7 +29,7 @@ public class TestBase {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
-        Configuration.remote = "https://" + user + ":" + password + "@" + System.getProperty("remoteBrowser");
+        Configuration.remote = "https://user 1:1234@selenoid.autotests.cloud/wd/hub";
 
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
