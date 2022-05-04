@@ -26,11 +26,22 @@ public class AllurTest extends TestBase {
     @Tag("Web")
     void testLogotipOzon() {
         step("Открыть главную страницу", () -> {
-            open("https://www.ozon.ru/");;
+            open(baseUrl);
         });
         step("Проверить наличие надписи Ozon в хедере", () -> {
             $("[data-widget=header]").should(text("Ozon"));
         });
+    }
+
+    @Test
+    @Owner("AlexDonskov")
+    @Severity(SeverityLevel.CRITICAL)
+    @Feature("Задачи в репозитории")
+    @DisplayName("Проверка Ozon в хедере")
+    @Tag("Web")
+    void logotipOzonTest() {
+        open(baseUrl);
+        $("[data-widget=header]").should(text("Ozon"));
     }
 
 }
